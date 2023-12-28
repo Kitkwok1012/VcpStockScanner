@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run script
-        run: python your_script.py
+        run: python stockScan.py
 
       - name: Rename and move result.txt
         run: mv result.txt "results/$(date +'%Y-%m-%d').txt"
