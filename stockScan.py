@@ -1,5 +1,6 @@
 import yfinance as yf
 import pandas as pd
+from datetime import date
 
 def check_stock_conditions(data):
     condition_1 = data['Close'] > data['200MA']
