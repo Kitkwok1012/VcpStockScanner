@@ -50,7 +50,7 @@ for ticker in tickers_list:
         print(f"Failed to fetch stock data for {ticker.ticker}. Error: {e}")
 
 if len(good_stocks) > 0:
-    file_name = f"{current_date}.txt"
+    file_name = "result.txt"
 
     with open(file_name, 'w') as file:
         file.write("The following stocks meet the conditions:\n")
