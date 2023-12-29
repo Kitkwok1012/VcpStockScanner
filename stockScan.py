@@ -32,7 +32,7 @@ good_stocks = []
 
 for ticker in tickers_list:
     try:
-        stock_data = ticker.history(start=start_date, end=end_date)
+        stock_data = ticker.history(start=current_date, end=current_date)
 
         stock_data['30MA'] = stock_data['Close'].rolling(window=30).mean()
         stock_data['40MA'] = stock_data['Close'].rolling(window=40).mean()
