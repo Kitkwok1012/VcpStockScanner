@@ -13,7 +13,7 @@ def check_stock_conditions(data):
   
     condition_4 = (data['Close'].shift(1) < data['50MA'].shift(1)) & (data['Close'] > data['50MA'])
 
-    condition_5 = data['RS-Ranking'] >= 70
+    condition_5 = data['RS-Ranking'] >= 85
 
     condition_6 = data['Volume'].diff().lt(0).rolling(window=5).sum() > 0
 
@@ -25,7 +25,7 @@ def check_stock_conditions(data):
 
 all_tickers = yf.Tickers('^IXIC')
 tickers_list = all_tickers.tickers
-
+print(tickers_list)
 current_date = date.today().strftime("%Y-%m-%d")
 
 good_stocks = []
